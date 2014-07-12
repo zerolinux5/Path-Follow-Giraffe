@@ -8,42 +8,38 @@
 
 #import "MyScene.h"
 
+@interface MyScene ()
+
+@property (nonatomic) SKSpriteNode *giraffe;
+
+@end
+
 @implementation MyScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
+        self.backgroundColor = [SKColor whiteColor];
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        self.giraffe = [SKSpriteNode spriteNodeWithImageNamed:@"giraffe"];
+        self.giraffe.position = CGPointMake(100, self.frame.size.height/2);
+        [self addChild:self.giraffe];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPathMoveToPoint(path, NULL, 0, 0);
+        CGPathAddLineToPoint(path, NULL, 50, 100);
+        SKAction *followline = [SKAction followPath:path asOffset:YES orientToPath:NO duration:3.0];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        SKAction *reversedLine = [followline reversedAction];
         
-        [self addChild:myLabel];
+        UIBezierPath *square = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 100, 100)];
+        SKAction *followSquare = [SKAction followPath:square.CGPath asOffset:YES orientToPath:NO duration:5.0];
+        
+        UIBezierPath *circle = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 100) cornerRadius:100];
+        SKAction *followCircle = [SKAction followPath:circle.CGPath asOffset:YES orientToPath:NO duration:5.0];
+        
+        [self.giraffe runAction:[SKAction sequence:@[followline, reversedLine, followSquare, followCircle]]];
     }
     return self;
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {

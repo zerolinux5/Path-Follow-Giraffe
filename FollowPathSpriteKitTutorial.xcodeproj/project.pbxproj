@@ -15,7 +15,6 @@
 		EABDF5E81971EF5F00074DC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDF5E71971EF5F00074DC4 /* main.m */; };
 		EABDF5EC1971EF5F00074DC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDF5EB1971EF5F00074DC4 /* AppDelegate.m */; };
 		EABDF5EF1971EF5F00074DC4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABDF5ED1971EF5F00074DC4 /* Main_iPhone.storyboard */; };
-		EABDF5F21971EF5F00074DC4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABDF5F01971EF5F00074DC4 /* Main_iPad.storyboard */; };
 		EABDF5F51971EF5F00074DC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDF5F41971EF5F00074DC4 /* ViewController.m */; };
 		EABDF5F81971EF5F00074DC4 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDF5F71971EF5F00074DC4 /* MyScene.m */; };
 		EABDF5FA1971EF5F00074DC4 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = EABDF5F91971EF5F00074DC4 /* Spaceship.png */; };
@@ -25,6 +24,7 @@
 		EABDF6051971EF5F00074DC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDF5DD1971EF5F00074DC4 /* UIKit.framework */; };
 		EABDF60D1971EF5F00074DC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EABDF60B1971EF5F00074DC4 /* InfoPlist.strings */; };
 		EABDF60F1971EF5F00074DC4 /* FollowPathSpriteKitTutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDF60E1971EF5F00074DC4 /* FollowPathSpriteKitTutorialTests.m */; };
+		EABDF6191971EFE500074DC4 /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = EABDF6181971EFE500074DC4 /* giraffe.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		EABDF5EA1971EF5F00074DC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EABDF5EB1971EF5F00074DC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EABDF5EE1971EF5F00074DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		EABDF5F11971EF5F00074DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		EABDF5F31971EF5F00074DC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EABDF5F41971EF5F00074DC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EABDF5F61971EF5F00074DC4 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		EABDF60A1971EF5F00074DC4 /* FollowPathSpriteKitTutorialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FollowPathSpriteKitTutorialTests-Info.plist"; sourceTree = "<group>"; };
 		EABDF60C1971EF5F00074DC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EABDF60E1971EF5F00074DC4 /* FollowPathSpriteKitTutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowPathSpriteKitTutorialTests.m; sourceTree = "<group>"; };
+		EABDF6181971EFE500074DC4 /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +123,10 @@
 		EABDF5E11971EF5F00074DC4 /* FollowPathSpriteKitTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				EABDF6181971EFE500074DC4 /* giraffe.png */,
 				EABDF5EA1971EF5F00074DC4 /* AppDelegate.h */,
 				EABDF5EB1971EF5F00074DC4 /* AppDelegate.m */,
 				EABDF5ED1971EF5F00074DC4 /* Main_iPhone.storyboard */,
-				EABDF5F01971EF5F00074DC4 /* Main_iPad.storyboard */,
 				EABDF5F31971EF5F00074DC4 /* ViewController.h */,
 				EABDF5F41971EF5F00074DC4 /* ViewController.m */,
 				EABDF5F61971EF5F00074DC4 /* MyScene.h */,
@@ -243,9 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABDF6191971EFE500074DC4 /* giraffe.png in Resources */,
 				EABDF5FA1971EF5F00074DC4 /* Spaceship.png in Resources */,
 				EABDF5FC1971EF5F00074DC4 /* Images.xcassets in Resources */,
-				EABDF5F21971EF5F00074DC4 /* Main_iPad.storyboard in Resources */,
 				EABDF5EF1971EF5F00074DC4 /* Main_iPhone.storyboard in Resources */,
 				EABDF5E61971EF5F00074DC4 /* InfoPlist.strings in Resources */,
 			);
@@ -306,14 +306,6 @@
 				EABDF5EE1971EF5F00074DC4 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		EABDF5F01971EF5F00074DC4 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EABDF5F11971EF5F00074DC4 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		EABDF60B1971EF5F00074DC4 /* InfoPlist.strings */ = {
@@ -409,6 +401,7 @@
 				INFOPLIST_FILE = "FollowPathSpriteKitTutorial/FollowPathSpriteKitTutorial-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,6 +416,7 @@
 				INFOPLIST_FILE = "FollowPathSpriteKitTutorial/FollowPathSpriteKitTutorial-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
